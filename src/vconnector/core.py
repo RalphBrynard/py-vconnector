@@ -227,6 +227,15 @@ class VConnector(object):
         return self.get_container_view(
             obj_type=[pyVmomi.vim.Datastore]
         )
+    
+    def get_vmfolder_view(self):
+        """
+        Get a view ref to all vim.Folder managed objects
+
+        """
+        return self.get_container_view(
+            obj_type=[pyVmomi.vim.Folder]
+        )
 
     def get_resource_pool_view(self):
         """
